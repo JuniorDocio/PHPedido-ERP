@@ -1,0 +1,65 @@
+body {
+    background: linear-gradient(to right, #ffdfd2, #ffc9b3);
+    font-family: 'Montserrat', sans-serif;
+}
+
+div{
+    display: grid;
+    justify-content: center;
+    padding: 5%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 65%;
+    background-color: #ffe5e8;
+    margin-left: 13% !important;
+    margin-top: 5% !important;
+}
+
+h2{
+    color: #6c567b;
+    text-align: center;
+}
+
+th{
+    color: #6c567b;
+}
+
+td{
+    color: #6c567b;
+    text-align: center;
+}
+
+table {
+    color: #6c567b;
+}
+
+a{
+    background-color: #f67280;
+    color: #fff;
+    padding: 3px;
+    border-radius: 3%;
+    text-decoration: none;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 3%;
+}
+
+a:hover {
+    text-decoration: none;
+    background-color: #c06c84;
+}
+
+a#excluir-lista-cupons, a#editar-lista-cupons {
+    background-color: #ffe5e8 !important;
+    border: solid;
+    border-color: #f67280 !important;
+    color: #6c567b !important;
+    border-radius: 3%;
+}
+
+a#excluir-lista-cupons:hover, a#editar-lista-cupons:hover {
+    background-color: #f67280 !important;
+    border: solid;
+    border-color: #f67280 !important;
+    color: #ffffff !important;
+}

@@ -1,0 +1,59 @@
+body {
+    background: linear-gradient(to right, #ffdfd2, #ffc9b3);
+    font-family: 'Montserrat', sans-serif;
+}
+
+div{
+    display: grid;
+    justify-content: center;
+    padding: 5%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 400px;
+    background-color: #ffe5e8;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+
+h1{
+    color: #6c567b;
+    text-align: center;
+}
+
+th{
+    color: #6c567b;
+}
+
+td{
+    color: #6c567b;
+    font-size: 94%;
+}
+
+a{
+    background-color: #f67280;
+    color: #fff;
+    padding: 3px;
+    border-radius: 3%;
+    text-decoration: none;
+    justify-content: center;
+    display: flex;
+}
+
+a:hover {
+    text-decoration: none;
+    background-color: #c06c84;
+}
+
+a#voltar-lista-produtos{
+    margin-bottom: 2%;
+}
+
+a#ver-detalhes-pedido {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+a#excluir-pedido {
+    margin-left: 3%;
+    margin-right: 3%;
+}

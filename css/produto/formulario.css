@@ -1,0 +1,124 @@
+body {
+    background: linear-gradient(to right, #ffdfd2, #ffc9b3);
+    font-family: 'Montserrat', sans-serif;
+}
+
+div#formulario-cadastro-produto{
+    display: grid;
+    justify-content: center;
+    padding: 5%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 400px;
+    background-color: #ffe5e8;
+    margin-left: 30% !important;
+    margin-top: 5% !important;
+}
+
+label{
+    color: #6c567b;
+}
+
+h2{
+    color: #6c567b;
+    text-align: center;
+}
+
+h3{
+    color: #6c567b;
+    text-align: center;
+}
+
+th{
+    color: #6c567b;
+}
+
+td{
+    color: #6c567b;
+}
+
+a{
+    background-color: #f67280;
+    color: #fff;
+    padding: 3px;
+    border-radius: 3%;
+    text-decoration: none;
+    justify-content: center;
+    display: flex;
+}
+
+a:hover {
+    text-decoration: none;
+    background-color: #c06c84;
+}
+
+form {
+    display: grid;
+    justify-content: center;
+}
+
+button {
+    background-color: #f67280;
+    color: #fff;
+    border-color: #f67280;
+    border-radius: 3%;
+}
+
+button:hover {
+    background-color: #c06c84;
+    border-color: #c06c84;
+}
+
+input[type="submit"]{
+    background-color: #f67280;
+    color: #fff;
+    border-color: #f67280;
+    border-radius: 3%;
+}
+
+input[type="submit"]:hover{
+    background-color: #c06c84;
+    border-color: #c06c84;
+}
+
+.variacao-item button, a#listar-produtos {
+    background-color: #ffe5e8;
+    border: solid;
+    border-color: #f67280;
+    color: #6c567b;
+}
+
+.variacao-item button:hover, a#listar-produtos:hover {
+    background-color: #f67280;
+    border: solid;
+    border-color: #f67280;
+    color: #ffffff;
+}
+
+.variacao-item button {
+    margin-top: 2%;
+    margin-left: 41%;
+    margin-bottom: 2%;
+}
+
+button#adicionar-variacao{
+    background-color: #ffe5e8;
+    border: solid;
+    border-color: #f67280;
+    color: #6c567b;
+}
+
+button#adicionar-variacao:hover{
+    background-color: #f67280;
+    border: solid;
+    border-color: #f67280;
+    color: #ffffff;
+}
+
+.variacao-item input[type="text"]{
+    padding-right: 7.5%;
+}
+
+.variacao-item input[type="number"] {
+    padding-right: 7.5%;
+}
