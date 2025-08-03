@@ -14,7 +14,7 @@ The system offers a web-based interface that enables administrators to perform e
 - 🛒 Integrated shopping cart to streamline the order flow  
 - 🖥️ Intuitive web interface for ease of use by administrators
 
-## 📂 Database
+## Database
 
 The system uses a relational MySQL database. Below is the full script to create the database and all necessary tables with foreign key constraints.
 
