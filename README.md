@@ -19,8 +19,8 @@ The system offers a web-based interface that enables administrators to perform e
 The system uses a relational MySQL database. Below is the full script to create the database and all necessary tables with foreign key constraints.
 
 ### 🎯 Create the database
-
-```-- Table: cupons
+```
+-- Table: cupons
 CREATE TABLE cupons (
     id_cupom INT AUTO_INCREMENT PRIMARY KEY,
     codigo VARCHAR(50) NOT NULL,
