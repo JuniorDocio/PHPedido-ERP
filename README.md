@@ -80,4 +80,4 @@ CREATE TABLE pedido_itens (
     FOREIGN KEY (id_pedido) REFERENCES pedidos(id_pedido),
     FOREIGN KEY (id_produto) REFERENCES produtos(id_produto),
     FOREIGN KEY (id_variacao) REFERENCES variacoes(id_variacao)
-);```
+);
