@@ -23,63 +23,56 @@ The system uses a relational MySQL database. Below is the full script to create 
 The database name should be: erp_montink
 
 -- Table: cupons
-CREATE TABLE cupons (
-    id_cupom INT AUTO_INCREMENT PRIMARY KEY,
-    codigo VARCHAR(50) NOT NULL,
-    validade DATETIME NOT NULL,
-    desconto_percentual INT NOT NULL,
-    ativo TINYINT(1) NOT NULL,
-    valor_minimo DECIMAL(10,2) NOT NULL
+CREATE TABLE `cupons` (
+  `id_cupom` int(11) NOT NULL,
+  `codigo` varchar(255) NOT NULL,
+  `validade` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `desconto_percentual` float NOT NULL,
+  `ativo` int(11) NOT NULL,
+  `valor_minimo` float NOT NULL
 );
 
 -- Table: produtos
-CREATE TABLE produtos (
-    id_produto INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
-    preco DECIMAL(10,2) NOT NULL,
-    id_estoque INT NOT NULL,
-    descricao VARCHAR(255)
+CREATE TABLE `produtos` (
+  `id_produto` int(11) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `preco` float NOT NULL,
+  `id_estoque` int(11) NOT NULL,
+  `descricao` text NOT NULL
 );
 
 -- Table: variacoes
-CREATE TABLE variacoes (
-    id_variacao INT AUTO_INCREMENT PRIMARY KEY,
-    id_produto INT NOT NULL,
-    nome VARCHAR(50) NOT NULL,
-    FOREIGN KEY (id_produto) REFERENCES produtos(id_produto)
+CREATE TABLE `variacoes` (
+  `id_variacao` int(11) NOT NULL,
+  `id_produto` int(11) NOT NULL,
+  `nome` varchar(255) NOT NULL
 );
 
 -- Table: estoque
-CREATE TABLE estoque (
-    id_estoque INT AUTO_INCREMENT PRIMARY KEY,
-    id_produto INT NOT NULL,
-    id_variacao INT NOT NULL,
-    quantidade INT NOT NULL,
-    FOREIGN KEY (id_produto) REFERENCES produtos(id_produto),
-    FOREIGN KEY (id_variacao) REFERENCES variacoes(id_variacao)
+CREATE TABLE `estoque` (
+  `id_estoque` int(11) NOT NULL,
+  `id_produto` int(11) NOT NULL,
+  `id_variacao` int(11) NOT NULL,
+  `quantidade` int(11) NOT NULL
 );
 
 -- Table: pedidos
-CREATE TABLE pedidos (
-    id_pedido INT AUTO_INCREMENT PRIMARY KEY,
-    total_pedido DECIMAL(10,2) NOT NULL,
-    status VARCHAR(20) NOT NULL,
-    data_pedido DATETIME NOT NULL,
-    id_cupom INT NOT NULL,
-    frete DECIMAL(10,2) NOT NULL,
-    desconto DECIMAL(10,2) NOT NULL,
-    FOREIGN KEY (id_cupom) REFERENCES cupons(id_cupom)
+CREATE TABLE `pedidos` (
+  `id_pedido` int(11) NOT NULL,
+  `total_pedido` float NOT NULL,
+  `status` varchar(255) NOT NULL,
+  `data_pedido` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `id_cupom` int(11) NOT NULL,
+  `frete` float NOT NULL,
+  `desconto` float NOT NULL
 );
 
 -- Table: pedido_itens
-CREATE TABLE pedido_itens (
-    id_item INT AUTO_INCREMENT PRIMARY KEY,
-    id_pedido INT NOT NULL,
-    id_produto INT NOT NULL,
-    id_variacao INT NOT NULL,
-    quantidade INT NOT NULL,
-    preco_unitario DECIMAL(10,2) NOT NULL,
-    FOREIGN KEY (id_pedido) REFERENCES pedidos(id_pedido),
-    FOREIGN KEY (id_produto) REFERENCES produtos(id_produto),
-    FOREIGN KEY (id_variacao) REFERENCES variacoes(id_variacao)
+CREATE TABLE `pedido_itens` (
+  `id_item` int(11) NOT NULL,
+  `id_pedido` int(11) NOT NULL,
+  `id_produto` int(11) NOT NULL,
+  `id_variacao` int(11) NOT NULL,
+  `quantidade` int(11) NOT NULL,
+  `preco_unitario` float NOT NULL
 );
