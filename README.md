@@ -20,6 +20,8 @@ The system uses a relational MySQL database. Below is the full script to create 
 
 ### 🎯 Create the database
 ```
+The database name should be: erp_montink
+
 -- Table: cupons
 CREATE TABLE cupons (
     id_cupom INT AUTO_INCREMENT PRIMARY KEY,
